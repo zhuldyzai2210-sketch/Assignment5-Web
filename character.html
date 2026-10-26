@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Character Creator</title>
+  <link rel="stylesheet" href="character.css">
+  <script src="task3.js" defer></script>
+</head>
+<body>
+  <main class="creator">
+    <header class="header">
+      <span class="eyebrow">FANTASY STUDIO</span>
+      <h1>✨ Character Creator</h1>
+      <p>Build your legendary hero</p>
+    </header>
+
+    <div class="layout">
+      <section class="preview-panel">
+        <h2>Live Character Preview</h2>
+        <div id="character-preview"></div>
+      </section>
+
+      <section class="form-panel">
+        <h2>Customize Your Hero</h2>
+
+        <form id="character-form">
+          <div id="error-summary"
+               role="alert"
+               tabindex="-1"></div>
+
+          <div class="field">
+            <label for="character-name">Character Name</label>
+            <input id="character-name"
+                   name="characterName"
+                   type="text"
+                   minlength="3"
+                   maxlength="20"
+                   required
+                   value="Luna"
+                   aria-describedby="name-error">
+            <small id="name-error" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="character-class">Character Class</label>
+            <select id="character-class" required
+                    aria-describedby="class-error">
+              <option value="mage">Mage</option>
+              <option value="warrior">Warrior</option>
+              <option value="archer">Archer</option>
+            </select>
+            <small id="class-error" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="outfit-color">Outfit Color</label>
+            <select id="outfit-color" required
+                    aria-describedby="color-error">
+              <option value="purple">Purple</option>
+              <option value="blue">Blue</option>
+              <option value="pink">Pink</option>
+              <option value="green">Green</option>
+            </select>
+            <small id="color-error" class="error"></small>
+          </div>
+
+          <div class="skills-header">
+            <h3>Skill Points</h3>
+            <span id="points-left">0 points left</span>
+          </div>
+
+          <div class="field">
+            <label for="strength">Strength</label>
+            <input id="strength" type="number"
+                   min="1" max="10" required value="3"
+                   aria-describedby="strength-error">
+            <small id="strength-error" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="magic">Magic</label>
+            <input id="magic" type="number"
+                   min="1" max="10" required value="8"
+                   aria-describedby="magic-error">
+            <small id="magic-error" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="agility">Agility</label>
+            <input id="agility" type="number"
+                   min="1" max="10" required value="5"
+                   aria-describedby="agility-error">
+            <small id="agility-error" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="defense">Defense</label>
+            <input id="defense" type="number"
+                   min="1" max="10" required value="4"
+                   aria-describedby="defense-error">
+            <small id="defense-error" class="error"></small>
+          </div>
+
+          <p id="points-error" class="error"></p>
+
+          <div class="actions">
+            <button type="button" id="random-btn">
+              Random Character
+            </button>
+            <button type="button" id="reset-btn">
+              Reset
+            </button>
+          </div>
+
+          <button type="submit" id="create-btn">
+            Create Character
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <section class="result-panel">
+      <h2>Your Created Character</h2>
+      <div id="final-character"></div>
+    </section>
+  </main>
+</body>
+</html>

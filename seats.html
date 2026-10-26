@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Seat Booking</title>
+  <link rel="stylesheet" href="seats.css">
+  <script src="task2.js" defer></script>
+</head>
+<body>
+  <main class="cinema">
+    <header>
+      <span class="eyebrow">YOUR MOVIE EXPERIENCE</span>
+      <h1>🎟️ Cinema Seat Booking</h1>
+      <p>Choose your perfect seats!</p>
+    </header>
+
+    <section class="screen-section">
+      <div class="screen"></div>
+      <p>SCREEN</p>
+    </section>
+
+    <section class="seat-section">
+      <h2>Select Your Seats</h2>
+      <div id="seat-map" class="seat-map"></div>
+    </section>
+
+    <section class="legend">
+      <div><span class="legend-color standard"></span> Standard</div>
+      <div><span class="legend-color premium"></span> Premium</div>
+      <div><span class="legend-color vip"></span> VIP</div>
+      <div><span class="legend-color selected"></span> Selected</div>
+      <div><span class="legend-color booked"></span> Booked</div>
+    </section>
+
+    <section class="booking-panel">
+      <h2>Your Booking</h2>
+
+      <label for="zone-filter">Filter by zone</label>
+      <select id="zone-filter">
+        <option value="all">All zones</option>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+        <option value="vip">VIP</option>
+      </select>
+
+      <p id="selected-seats">No seats selected</p>
+      <p>Selected: <strong id="seat-count">0</strong>/6</p>
+      <p>Total: <strong id="total-price">0 ₸</strong></p>
+
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <div class="actions">
+        <button id="best-seats" type="button">Best Seats</button>
+        <button id="clear-seats" type="button">Clear</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
